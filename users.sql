@@ -1,0 +1,13 @@
+--SCRIPT PARA CRIAR O BANCO DE DADOS (NOS TESTES FOI USADO MySQL Workbench)--
+
+CREATE TABLE `projeto_1`.`users` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `cpf` VARCHAR(14) NOT NULL,
+  `nome` VARCHAR(30) NOT NULL,
+  `sobrenome` VARCHAR(30) NOT NULL,
+  `idade` INT NOT NULL,
+  `senha` VARCHAR(200) NOT NULL,
+  `salt` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`id`, `cpf`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
+  UNIQUE INDEX `cpf_UNIQUE` (`cpf` ASC) VISIBLE);
